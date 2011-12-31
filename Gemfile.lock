@@ -1,0 +1,18 @@
+PATH
+  remote: .
+  specs:
+    new_base_60 (1.0.5)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    hoe (2.12.5)
+      rake (~> 0.8)
+    rake (0.9.2.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  hoe
+  new_base_60!

@@ -1,5 +1,4 @@
-require "rubygems"
-require "hoe"
+require "bundler/gem_tasks"
 
 Hoe.plugins.delete :rubyforge
 

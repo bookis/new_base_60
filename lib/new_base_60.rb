@@ -1,5 +1,6 @@
 require "date"
 require "time"
+require 'new_base_60/version'
 
 class NewBase60
   VERSION = '1.0.4'
@@ -30,7 +31,6 @@ class NewBase60
       when 109..122 then char -= 63
       else               char  = 0  # treat all other noise as 0
       end
-
       num = 60 * num + char
     end
 
@@ -41,6 +41,8 @@ class NewBase60
   def to_date
     # HACK this is smelly
     # days since epoch * seconds * minutes * hours + timezone
+    puts NewBase60.new(@base_60).to_i
+    puts to_i
     time = Time.at(NewBase60.new(@base_60).to_i *
                    60 * 60 * 24 + Time.now.gmtoff.abs)
 
