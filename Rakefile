@@ -1,5 +1,5 @@
 require "bundler/gem_tasks"
-
+require "hoe"
 Hoe.plugins.delete :rubyforge
 
 Hoe.plugin :doofus, :git
