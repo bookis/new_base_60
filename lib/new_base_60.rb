@@ -41,8 +41,6 @@ class NewBase60
   def to_date
     # HACK this is smelly
     # days since epoch * seconds * minutes * hours + timezone
-    puts NewBase60.new(@base_60).to_i
-    puts to_i
     time = Time.at(NewBase60.new(@base_60).to_i *
                    60 * 60 * 24 + Time.now.gmtoff.abs)
 
